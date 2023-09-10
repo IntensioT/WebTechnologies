@@ -1,10 +1,10 @@
 package practical_work_01.tasks.task_13;
 
 import practical_work_01.tasks.task_12.Book;
+
 import java.util.Objects;
 
-public class ProgrammerBook extends Book
-{
+public class ProgrammerBook extends Book {
     private String language;
     private int level;
 

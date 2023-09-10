@@ -2,40 +2,41 @@ package practical_work_01.tasks.task_14;
 
 import practical_work_01.tasks.task_12.Book;
 
-import java.util.Arrays;
 
 public class MainRedefine {
-    public static void main(String []args){
-        Book[] mas ={new Book("a",4),new Book("b",4),new Book("c",8),new Book("d",1),
-                new Book("e",5),new Book("f",0),new Book("g",3)};
-        sort(mas);
-        System.out.println(Arrays.toString(mas));
-    }
-    public static void sort(Book[] array) {
-        int h = 1;
-        while (h*3 < array.length){
-            h = h * 3 + 1;
-        }
+    public static void main(String[] args) {
+        // create a book object
+        Book book1 = createBook("Leo Tolstoy", "War and Peace", 1000, 123);
+        // print the book
+        System.out.println(book1);
 
-        while(h >= 1) {
-            hSort(array, h);
-            h = h/3;
-        }
+        // create a copy of the book using clone()
+        Book book2 = book1.clone();
+        // change some fields of the copy
+        book2.setIsbn(456);
+        book2.setPrice(800);
+        // print the copy
+        System.out.println(book2);
+
+        // create another copy of the book using clone()
+        Book book3 = book1.clone();
+        // change some fields of the copy
+        book3.setIsbn(789);
+        book3.setAuthor("Fyodor Dostoyevsky");
+        // print the copy
+        System.out.println(book3);
     }
-    private static void hSort(Book[] array, int h) {
-        int length = array.length;
-        for (int i = h; i < length; i++) {
-            for (int j = i; j >= h; j = j - h) {
-                if (array[j].compareTo(array[j - h])<0)
-                    swap(array, j, j - h);
-                else
-                    break;
-            }
-        }
+
+    // a helper method to create a book object with given parameters
+    public static Book createBook(String author, String title, int price, int isbn) {
+        // create a new book object
+        Book book = new Book(author, isbn);
+        // set the title and price
+        book.setTitle(title);
+        book.setPrice(price);
+        // return the book object
+        return book;
     }
-    private static void swap(Book[] array, int j, int i) {
-        Book temp=array[i];
-        array[i]=array[j];
-        array[j]=temp;
-    }
+
+
 }

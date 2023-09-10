@@ -15,8 +15,8 @@ public class BasketMain {
 
         Basket basket = new Basket(balls);
         System.out.println("Balls inside the basket: ");
-        for (Ball ball: basket.balls) {
-            System.out.println("Color: " + ball.color  + " weight: " + ball.weight);
+        for (Ball ball : basket.balls) {
+            System.out.println("Color: " + ball.color + " weight: " + ball.weight);
         }
     }
 }

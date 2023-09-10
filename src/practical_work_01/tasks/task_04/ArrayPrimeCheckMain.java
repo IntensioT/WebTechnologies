@@ -20,7 +20,7 @@ public class ArrayPrimeCheckMain {
             System.out.println("No prime numbers");
     }
 
-    static boolean isPrime(int integer) {  //Тест Рабина-Миллера встроенный в BigInteger
+    public static boolean isPrime(int integer) {  //Тест Рабина-Миллера встроенный в BigInteger
         BigInteger bigInteger = BigInteger.valueOf(integer);
         return bigInteger.isProbablePrime((int) Math.log(integer));
     }

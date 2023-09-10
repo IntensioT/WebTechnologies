@@ -1,6 +1,5 @@
 package practical_work_01.tests.task_01;
 
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import practical_work_01.tasks.task_01.CalculationClass;
 
@@ -8,7 +7,7 @@ import practical_work_01.tasks.task_01.CalculationClass;
 class CalculationTest {
     double testX = 10;
     double testY = 20;
-    CalculationClass calculationClass = new CalculationClass(10,20);
+    CalculationClass calculationClass = new CalculationClass(10, 20);
     double expectedResult = 10.16469;
 
 
