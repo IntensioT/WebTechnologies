@@ -80,7 +80,7 @@
 
     <c:forEach var="movie" items="${movies}">
         <div class="movie-card">
-            <img src="./images/image.jpg"/>
+            <img src="./images/image.jpg" width="100" height="50"/>
             <a href="?command=movie&id=${movie.getId()}">${movie.getName()}</a>
             <p>${movie.getShortDescription()}</p>
         </div>
