@@ -7,9 +7,9 @@ spring:
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    username: Nikstanov
-    password: 15100103
-    url: jdbc:postgresql://localhost:5051/moviedb
+    username: postgres
+    password: 1
+    url: jdbc:postgresql://localhost:5432/moviedb
     hikari:
       maximum-pool-size: 10
 
